@@ -17,8 +17,8 @@ jobs:
         username:  ${{ secrets.DOCKER_USER }}
         password:  ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
-      run: docker build . -t kiliokuara/vivo50:${{ github.sha }} -t kiliokuara/vivo50:latest
+      run: docker build . -t llpp9980/vivo50:${{ github.sha }} -t kiliokuara/vivo50:latest
     - name: Push docker image
-      run: docker push kiliokuara/vivo50:${{ github.sha }}
+      run: docker push llpp9980/vivo50:${{ github.sha }}
     - name: push latest
-      run: docker push kiliokuara/vivo50:latest
+      run: docker push llpp9980/vivo50:latest
